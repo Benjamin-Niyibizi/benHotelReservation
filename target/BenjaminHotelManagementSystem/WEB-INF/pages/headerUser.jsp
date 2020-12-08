@@ -70,6 +70,9 @@ body {
   <a href="user">Add User</a>
   <a href="room">Add Room</a>
   <a href="reception">Reception</a>
+  <c:if test ="${role == 'Restaurant' || role == 'RestaurantManager'}">
+    <a href="restaurant">Restaurant</a>
+  </c:if>
   <a href="report">Report</a>
   <a href="logout">Logout</a>
 </div>

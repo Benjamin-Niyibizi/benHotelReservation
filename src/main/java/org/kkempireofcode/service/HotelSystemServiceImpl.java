@@ -1,9 +1,6 @@
 package org.kkempireofcode.service;
 
-import org.kkempireofcode.model.Booking;
-import org.kkempireofcode.model.Reservation;
-import org.kkempireofcode.model.Room;
-import org.kkempireofcode.model.User;
+import org.kkempireofcode.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -71,6 +68,11 @@ public class HotelSystemServiceImpl  implements HotelSystemService{
     }
 
     @Override
+    public List<Item> getAllItems() {
+        return hotelSystemDao.getAllItems();
+    }
+
+    @Override
     public User getUSer(int id) {
         return hotelSystemDao.getUSer(id);
     }
@@ -110,25 +112,26 @@ public class HotelSystemServiceImpl  implements HotelSystemService{
 
     @Override
     public void makeReservation(Reservation reservation) {
-
         hotelSystemDao.makeReservation(reservation);
     }
 
     @Override
     public void addUser(User user) {
-
         hotelSystemDao.addUser(user);
     }
 
-
     @Override
     public void addRoom(Room room) {
-
         hotelSystemDao.addRoom(room);
     }
 
     @Override
     public void addBooking(Booking booking) {
         hotelSystemDao.addBooking(booking);
+    }
+
+    @Override
+    public void addItem(Item item) {
+        hotelSystemDao.addItem(item);
     }
 }

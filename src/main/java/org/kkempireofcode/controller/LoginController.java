@@ -39,6 +39,7 @@ public class LoginController {
             model.setViewName("homeUser");
            session.setAttribute("fname", user.getFirstName());
            session.setAttribute("lname", user.getLastName());
+            session.setAttribute("role",user.getRole());
                     } else {
             model.setViewName("home");
         }

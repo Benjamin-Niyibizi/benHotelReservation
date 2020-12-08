@@ -3,10 +3,7 @@ package org.kkempireofcode.service;
 import org.dom4j.tree.BackedList;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
-import org.kkempireofcode.model.Booking;
-import org.kkempireofcode.model.Reservation;
-import org.kkempireofcode.model.Room;
-import org.kkempireofcode.model.User;
+import org.kkempireofcode.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -140,6 +137,13 @@ public class HotelSystemDaoImpl implements HotelSystemDao {
     }
 
     @Override
+    public List<Item> getAllItems() {
+        Query qr=sessionFactory.getCurrentSession().createQuery("FROM Item");
+        List<Item> result=(List<Item>) qr.list();
+        return result;
+    }
+
+    @Override
     public User getUSer(int id) {
         User user=null;
         Query qr=sessionFactory.getCurrentSession().createQuery("FROM User WHERE id="+id);
@@ -206,5 +210,10 @@ public class HotelSystemDaoImpl implements HotelSystemDao {
     @Override
     public void addBooking(Booking booking) {
         sessionFactory.getCurrentSession().saveOrUpdate(booking);
+    }
+
+    @Override
+    public void addItem(Item item) {
+        sessionFactory.getCurrentSession().saveOrUpdate(item);
     }
 }

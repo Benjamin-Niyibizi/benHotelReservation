@@ -1,9 +1,6 @@
 package org.kkempireofcode.service;
 
-import org.kkempireofcode.model.Booking;
-import org.kkempireofcode.model.Reservation;
-import org.kkempireofcode.model.Room;
-import org.kkempireofcode.model.User;
+import org.kkempireofcode.model.*;
 
 import java.sql.Date;
 import java.util.List;
@@ -15,6 +12,7 @@ public interface HotelSystemService {
     public void addUser(User user);
     public void addRoom(Room room);
     public void addBooking(Booking booking);
+    public void addItem(Item item);
 
     public List<User> getAllUsers();
     public List<Room> getAllRooms();
@@ -25,8 +23,7 @@ public interface HotelSystemService {
     public List<Booking> getAllBookingsFromDate(Date dateFrom);
     public List<Booking> getAllBookingsByStartDateAndEndDate(Date startDate,Date endDate);
     public List<Reservation> getAllReservationByStartDateAndEndDate(Date startDate, Date endDate);
-
-
+    public List<Item> getAllItems();
     public User getUSer(int id);
     public Room getRoom(int id);
     public Booking getBooking(int id);
@@ -38,6 +35,11 @@ public interface HotelSystemService {
 
     public  void removeUser(User user);
     public  void removeRoom(Room room);
+
+
+
+
+
 
 
 }

@@ -9,7 +9,6 @@ import org.kkempireofcode.model.Reservation;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 
 public class FileExport {
@@ -58,13 +57,9 @@ public class FileExport {
     }
 
 
-    private static void addReportContent(Document document,List<Booking> bookings) throws DocumentException, IOException {
+    private static void addReportContent(Document document,List<Booking> bookings) throws DocumentException{
 
-        Image logo=Image.getInstance("file:///home/benjamin/Desktop/stu4.jpeg");
-        logo.scaleToFit(60,60);
-        document.add(logo);
-
-        Chunk chk = new Chunk("Booking Report");
+       Chunk chk = new Chunk("Booking Report");
         chk.setFont(new Font(Font.FontFamily.COURIER, 8, Font.BOLD));
         chk.setUnderline(0.2f, -2f);
         Paragraph pa = new Paragraph();
@@ -77,12 +72,7 @@ public class FileExport {
         // add a table
         document.add(createReportTable(bookings));
     }
-    private static void addReservationContent(Document document,List<Reservation> reservations) throws DocumentException, IOException {
-
-        Image logo=Image.getInstance("file:///home/benjamin/Desktop/stu4.jpeg");
-        logo.scaleToFit(60,60);
-        document.add(logo);
-
+    private static void addReservationContent(Document document,List<Reservation> reservations) throws DocumentException{
         Chunk chk = new Chunk("Reservation Report");
         chk.setFont(new Font(Font.FontFamily.COURIER, 8, Font.BOLD));
         chk.setUnderline(0.2f, -2f);
