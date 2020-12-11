@@ -216,4 +216,9 @@ public class HotelSystemDaoImpl implements HotelSystemDao {
     public void addItem(Item item) {
         sessionFactory.getCurrentSession().saveOrUpdate(item);
     }
+
+    @Override
+    public void addSellItem(Sell sell) {
+        sessionFactory.getCurrentSession().saveOrUpdate(sell);
+    }
 }

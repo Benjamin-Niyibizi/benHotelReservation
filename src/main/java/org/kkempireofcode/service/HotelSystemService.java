@@ -8,11 +8,15 @@ import java.util.List;
 public interface HotelSystemService {
 
     public User getUSer(String username, String password);
+    public User getUSer(int id);
+    public Room getRoom(int id);
+    public Booking getBooking(int id);
 
     public void addUser(User user);
     public void addRoom(Room room);
     public void addBooking(Booking booking);
     public void addItem(Item item);
+    public void addSellItem(Sell sell);
 
     public List<User> getAllUsers();
     public List<Room> getAllRooms();
@@ -24,9 +28,6 @@ public interface HotelSystemService {
     public List<Booking> getAllBookingsByStartDateAndEndDate(Date startDate,Date endDate);
     public List<Reservation> getAllReservationByStartDateAndEndDate(Date startDate, Date endDate);
     public List<Item> getAllItems();
-    public User getUSer(int id);
-    public Room getRoom(int id);
-    public Booking getBooking(int id);
 
     public void editUser(User user);
     public void editRoom(Room room);

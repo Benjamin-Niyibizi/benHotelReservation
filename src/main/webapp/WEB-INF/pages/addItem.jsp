@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ include file="headerUser.jsp" %>
-<title>Add Room</title>
+<title>Add Item</title>
 </head>
 <body>
 <h1><font color="black">Add Item</font></h1>
@@ -17,6 +17,10 @@
 <tr>
 <td><font color="black">Sell Price:</font></td>
 <td><input type="number" name="sellprice"></td>
+</tr>
+<tr>
+<td><font color="black">Available Quantity:</font></td>
+<td><input type="number" name="availableQuantity" value="0"></td>
 </tr>
 <tr>
 <td colspan="2"><input type="submit" name="AddItembtn" value="Add Item"></td>

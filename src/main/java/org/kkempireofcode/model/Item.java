@@ -14,6 +14,8 @@ public class Item {
     private double buyPrice;
     @Column
     private double sellPrice;
+    @Column
+    private int availableQuantity;
 
     public int getItemId() {
         return itemId;
@@ -46,4 +48,13 @@ public class Item {
     public void setSellPrice(double sellPrice) {
         this.sellPrice = sellPrice;
     }
+
+    public int getAvailableQuantity() {
+        return availableQuantity;
+    }
+
+    public void setAvailableQuantity(int availableQuantity) {
+        this.availableQuantity = availableQuantity;
+    }
+
 }

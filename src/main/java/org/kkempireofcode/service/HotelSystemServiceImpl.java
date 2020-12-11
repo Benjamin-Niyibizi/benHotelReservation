@@ -134,4 +134,9 @@ public class HotelSystemServiceImpl  implements HotelSystemService{
     public void addItem(Item item) {
         hotelSystemDao.addItem(item);
     }
+
+    @Override
+    public void addSellItem(Sell sell) {
+        hotelSystemDao.addSellItem(sell);
+    }
 }

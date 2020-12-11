@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ include file="headerUser.jsp" %>
-<title>Reception</title>
+<title>Restaurant</title>
 </head>
 <body>
 <font color="black">

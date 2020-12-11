@@ -14,6 +14,8 @@ public interface HotelSystemDao {
     public void addRoom(Room room);
     public void addBooking(Booking booking);
     public void addItem(Item item);
+    public void addSellItem(Sell sell);
+
 
     public List<User> getAllUsers();
     public List<Room> getAllRooms();
